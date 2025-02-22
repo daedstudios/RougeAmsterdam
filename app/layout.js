@@ -20,9 +20,23 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#310000] text-white`}
       >
-        {children}
+        <div className="flex">
+          <div className="hidden lg:grid w-1/5 h-screen grid-rows-4 bg-black">
+            <div className="row-span-1 w-full">dvfgsd</div>
+            <div className="row-span-1 w-full">dvfgsd</div>
+            <div className="row-span-1 w-full">dvfgsd</div>
+            <div className="row-span-1 w-full">dvfgsd</div>
+          </div>
+          <div className="w-full lg:w-4/5">
+            <div className="hidden lg:flex">
+              <div className="w-1/2 h-20 bg-black">sdvgsdv</div>
+              <div className="w-1/2 h-20 bg-black">sdvgsdv</div>
+            </div>
+            <div className="min-h-20 bg-black">{children}</div>
+          </div>
+        </div>
       </body>
     </html>
   );
