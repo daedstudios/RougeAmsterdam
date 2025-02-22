@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
+import NavCard from "@/components/NavCard";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,15 +26,27 @@ export default function RootLayout({ children }) {
       >
         <div className="flex gap-2">
           <div className="hidden lg:grid w-1/5 h-screen gap-2">
-            <div className="row-span-1 bg-black w-full">dvfgsd</div>
-            <div className="row-span-1 w-full bg-black">dvfgsd</div>
-            <div className="row-span-1 w-full bg-black">dvfgsd</div>
-            <div className="row-span-1 w-full bg-black">dvfgsd</div>
+            <Link href="/about">
+              <NavCard Text="About" />
+            </Link>
+            <Link href="/gallery">
+              <NavCard Text="Gallery" />
+            </Link>
+            <Link href="/Events">
+              <NavCard Text="Events" />
+            </Link>
+            <Link href="/Contact">
+              <NavCard Text="Contact" />
+            </Link>
           </div>
           <div className="w-full lg:w-4/5">
             <div className="hidden lg:flex gap-2 mb-2">
-              <div className="w-1/2 h-20 bg-black">sdvgsdv</div>
-              <div className="w-1/2 h-20 bg-black">sdvgsdv</div>
+              <div className="w-1/2 ">
+                <NavCard Text={"aosm3e text"} />
+              </div>
+              <div className="w-1/2 ">
+                <NavCard Text={"aosm3e text"} />
+              </div>
             </div>
             <div className="min-h-20 bg-black">{children}</div>
           </div>
