@@ -22,15 +22,15 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#310000] text-white`}
       >
-        <div className="flex">
-          <div className="hidden lg:grid w-1/5 h-screen grid-rows-4 bg-black">
-            <div className="row-span-1 w-full">dvfgsd</div>
-            <div className="row-span-1 w-full">dvfgsd</div>
-            <div className="row-span-1 w-full">dvfgsd</div>
-            <div className="row-span-1 w-full">dvfgsd</div>
+        <div className="flex gap-2">
+          <div className="hidden lg:grid w-1/5 h-screen gap-2">
+            <div className="row-span-1 bg-black w-full">dvfgsd</div>
+            <div className="row-span-1 w-full bg-black">dvfgsd</div>
+            <div className="row-span-1 w-full bg-black">dvfgsd</div>
+            <div className="row-span-1 w-full bg-black">dvfgsd</div>
           </div>
           <div className="w-full lg:w-4/5">
-            <div className="hidden lg:flex">
+            <div className="hidden lg:flex gap-2 mb-2">
               <div className="w-1/2 h-20 bg-black">sdvgsdv</div>
               <div className="w-1/2 h-20 bg-black">sdvgsdv</div>
             </div>
