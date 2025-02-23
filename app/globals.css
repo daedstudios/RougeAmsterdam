@@ -6,8 +6,8 @@
 
 :root {
   --font-spline-mono: "Spline Sans Mono", monospace;
-   --background: #ffffff;
-   --foreground: #130000;
+   --background: #130000;
+   --foreground: #ffffff;
 }
 
 body {
@@ -16,7 +16,9 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff;
-    --foreground: #130000;
+    /* --background: #ffffff;
+    --foreground: #130000; */
+     --background: #130000;
+   --foreground: #ffffff;
   }
 }
