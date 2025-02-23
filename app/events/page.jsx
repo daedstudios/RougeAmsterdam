@@ -19,7 +19,7 @@ export default function About() {
     <>
       {currentEvents.map((i, index) => (
         <div
-          className="col-span-1 row-span-1 lg:row-span-2 border-t-4 border-[#fff]"
+          className="col-span-1 row-span-1 lg:row-span-2 border-t-2 border-[#fff]"
           key={i + 6}
         >
           {i.text}
@@ -27,7 +27,7 @@ export default function About() {
       ))}
       {previousEvents.map((i, index) => (
         <div
-          className="col-span-1 row-span-1 lg:row-span-2 opacity-65 border-t-4 border-[#fff]"
+          className="col-span-1 row-span-1 lg:row-span-2 opacity-65 border-t-2 border-[#fff]"
           key={i}
         >
           {i.text}
