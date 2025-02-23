@@ -1,17 +1,15 @@
-import { Geist, Geist_Mono } from "next/font/google";
+
+import { Spline_Sans_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import NavCard from "@/components/NavCard";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+const splineMono = Spline_Sans_Mono({
+  variable: "--font-spline-mono",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -21,8 +19,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#310000] text-white`}
+      <body className={`${splineMono.variable} antialiased bg-[#310000] text-white`}
       >
         <div className="flex gap-2">
           <div className="hidden lg:grid w-1/5 h-screen gap-2">
