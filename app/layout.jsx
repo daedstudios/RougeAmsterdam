@@ -22,34 +22,31 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#310000] text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#310000] text-white max-w-screen overflow-y-auto overflow-x-hidden text-[1.5rem]`}
       >
-        <div className="flex gap-2">
-          <div className="hidden lg:grid w-1/5 h-screen gap-2">
-            <Link href="/about">
-              <NavCard Text="About" />
-            </Link>
-            <Link href="/gallery">
-              <NavCard Text="Gallery" />
-            </Link>
-            <Link href="/Events">
-              <NavCard Text="Events" />
-            </Link>
-            <Link href="/Contact">
-              <NavCard Text="Contact" />
-            </Link>
-          </div>
-          <div className="w-full lg:w-4/5">
-            <div className="hidden lg:flex gap-2 mb-2">
-              <div className="w-1/2 ">
-                <NavCard Text={"aosm3e text"} />
-              </div>
-              <div className="w-1/2 ">
-                <NavCard Text={"aosm3e text"} />
-              </div>
-            </div>
-            <div className="min-h-20 bg-black">{children}</div>
-          </div>
+        <div className="hidden fixed top-0 left-0 lg:grid grid-rows-5 w-1/5 h-screen gap-2 max-h-screen py-2">
+          <Link href="/about">
+            <NavCard Text="About" />
+          </Link>
+          <Link href="/gallery">
+            <NavCard Text="Gallery" />
+          </Link>
+          <Link href="/Events">
+            <NavCard Text="Events" />
+          </Link>
+          <Link href="/Contact">
+            <NavCard Text="Contact" />
+          </Link>
+          <Link href="/Contact">
+            <NavCard Text="Contact" />
+          </Link>
+        </div>
+        <div className="absolute top-0 right-0 w-full lg:w-4/5 p-2 overflow-y-auto h-screen grid max-h-screen gap-2 grid-cols-2 grid-rows-5">
+          {/* <div> */}
+          <NavCard Text="Contact" />
+          <NavCard Text="Contact" />
+          {/* </div> */}
+          {children}
         </div>
       </body>
     </html>
