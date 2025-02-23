@@ -16,7 +16,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${splineMono.variable} antialiased`}>
+      <body
+        className={`${splineMono.variable} antialiased bg-background text-foreground`}
+      >
         <div className="hidden fixed top-0 left-0 lg:grid grid-rows-5 w-1/5 h-screen gap-2 max-h-screen py-2">
           <Link href="/about">
             <NavCard Text="About" />
