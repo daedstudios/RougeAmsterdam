@@ -2,6 +2,7 @@ import { Spline_Sans_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 // import NavCard from "@/components/navcard";
+import Image from "next/image";
 
 const splineMono = Spline_Sans_Mono({
   variable: "--font-spline-mono",
@@ -27,7 +28,9 @@ export default function RootLayout({ children }) {
       >
         <div className="hidden fixed top-0 left-0 lg:grid grid-rows-5 w-1/5 h-screen gap-2 max-h-screen py-2">
           <Link href="/">
-            <NavCard Text="Logo" />
+            <div className="relative col-span-1 border-t-4 border-[#fff] row-span-1 h-full w-full">
+              <Image src="/images/LogoRouge.svg" alt="Rouge Logo" className="w-full h-full" layout="fill" />
+            </div>
           </Link>
           <Link href="/about">
             <NavCard Text="About" />
