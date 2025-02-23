@@ -15,8 +15,11 @@ export const metadata = {
 };
 const NavCard = ({ Text }) => {
   return (
-    <div className="row-span-1 col-span-1 w-full h-full border-t-4 border-[#fff] p-2 text-[2rem]">
+    <div className="row-span-1 col-span-1 w-full h-full flex-col items-left border-t-4 border-[#fff] p-2 text-[2rem]">
       {Text}
+      <div className="w-8 h-8">
+         <Image src="/images/arrowNav.svg" alt="Arrow" width={32} height={32}/>
+      </div>
     </div>
   );
 };
