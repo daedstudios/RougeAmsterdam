@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
               <NavCard Text="Contact" />
             </Link>
           </div>
-          <div className="absolute top-0 right-0 w-full lg:w-4/5 p-2 overflow-y-auto h-[200vh] lg:h-screen grid  gap-2 grid-cols-1 lg:grid-cols-2 grid-rows-10">
+          <div className="absolute top-0 right-0 w-full lg:w-4/5 p-2 overflow-y-auto h-[300vh] lg:h-screen grid  gap-2 grid-cols-1 lg:grid-cols-2 grid-rows-10">
             {/* this is phone nav these two divs */}
             <div className="row-span-1 lg:row-span-2 col-span-1 w-full h-full border-t-2 border-[#fff] p-2 text-[2rem]">
               "rsgbsergbvs"
