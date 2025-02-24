@@ -25,12 +25,11 @@ export default function RootLayout({ children }) {
       >
         <TransitionProvider>
           <div className="hidden fixed top-0 left-0 lg:grid grid-rows-5 w-1/5 h-screen gap-2 max-h-screen py-2">
-            <Link href="/">
-              <div className="relative col-span-1 border-t-2 border-[#fff] row-span-1 h-full w-full">
+            <Link href="/" className="border-t-2 border-[#fff]">
+              <div className="relative col-span-1 row-span-1 h-[70%] w-[70%] xl:w-[60%] xl:h-[60%] xl:mt-4 hover:scale-110 hover:translate-x-4 duration-200">
                 <Image
                   src="/images/LogoRouge.svg"
                   alt="Rouge Logo"
-                  className="w-full h-full"
                   layout="fill"
                 />
               </div>
