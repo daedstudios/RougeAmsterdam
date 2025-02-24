@@ -25,12 +25,11 @@ export default function RootLayout({ children }) {
       >
         <TransitionProvider>
           <div className="hidden fixed top-0 left-0 lg:grid grid-rows-5 w-1/5 h-screen gap-2 max-h-screen py-2">
-            <Link href="/">
-              <div className="relative col-span-1 border-t-2 border-[#fff] row-span-1 h-full w-full">
+            <Link href="/" className="border-t-2 border-[#fff]">
+              <div className="relative col-span-1 row-span-1 h-[70%] w-[70%] xl:w-[60%] xl:h-[60%] xl:mt-4 hover:scale-110 hover:translate-x-4 duration-200">
                 <Image
                   src="/images/LogoRouge.svg"
                   alt="Rouge Logo"
-                  className="w-full h-full"
                   layout="fill"
                 />
               </div>
@@ -48,7 +47,7 @@ export default function RootLayout({ children }) {
               <NavCard Text="Contact" />
             </Link>
           </div>
-          <div className="absolute top-0 right-0 w-full lg:w-4/5 p-2 overflow-y-auto h-[200vh] lg:h-screen grid  gap-2 grid-cols-1 lg:grid-cols-2 grid-rows-10">
+          <div className="absolute top-0 right-0 w-full lg:w-4/5 p-2 overflow-y-auto h-[300vh] lg:h-screen grid  gap-2 grid-cols-1 lg:grid-cols-2 grid-rows-10">
             {/* this is phone nav these two divs */}
             <div className="row-span-1 lg:row-span-2 col-span-1 w-full h-full border-t-2 border-[#fff] p-2 text-[2rem]">
               "rsgbsergbvs"
