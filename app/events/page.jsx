@@ -47,8 +47,9 @@ export default function About() {
           className="col-span-1 row-span-1 lg:row-span-2 border-t-2 border-[#fff] flex flex-col justify-evenly items-start align-middle"
           key={i + 6}
         >
+          <div className="text-[0.85rem]"> {i.date}</div>
           <div>{i.text}</div>
-          <div className="border border-white w-40 flex justify-start align-middle items-center gap-2 text-[1rem] rounded-[3rem] h-8 Lg:h-12 pl-3 cursor-pointer hover:rounded-sm hover:w-[85%] hover:h-12 hover:shadow-xl duration-150 opacity-55 hover:opacity-100">
+          <div className="border border-white w-40 flex justify-between p-4 align-middle items-center  text-[1rem] rounded-[3rem] h-8 Lg:h-12 pl-3 cursor-pointer hover:rounded-[3rem] hover:w-[40%] hover:h-12 hover:shadow-xl duration-150 ">
             get tickets
             <ArrowUpRight size={18} />
           </div>

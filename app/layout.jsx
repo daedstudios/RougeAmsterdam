@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${splineMono.variable} antialiased text-[1.5rem] bg-background text-foreground`}
+        className={`${splineMono.variable} antialiased text-[1.25rem] bg-background text-foreground`}
       >
         <TransitionProvider>
           <div className="hidden fixed top-0 left-0 lg:grid grid-rows-5 w-1/5 h-screen gap-2 max-h-screen py-2">
