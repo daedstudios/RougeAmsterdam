@@ -39,7 +39,12 @@ const NavCard = ({ Text }) => {
     >
       {Text}
       <div className="w-8 h-8" ref={ArrowRef}>
-        <Image src="/images/arrowNav.svg" alt="Arrow" width={32} height={32} />
+        <Image
+          src="/images/icons/arrowNav.svg"
+          alt="Arrow"
+          width={32}
+          height={32}
+        />
       </div>
     </div>
   );
