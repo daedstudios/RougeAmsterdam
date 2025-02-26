@@ -30,7 +30,7 @@ export default function Home() {
         is more than just a club; it's an immersive experience of deep bass,
         pulsating lights, and an electrifying atmosphere. Rooted in the
       </div>
-      <div className="h-full text-[2rem] col col-span-1 lg:row-span-2 row-span-1">
+      <div className="h-full text-[2rem] col col-span-1 lg:row-span-3 row-span-1">
         <form className=" pt-4 justify-between flex flex-col gap-4 text-white text-lg">
           <input
             type="text"
@@ -68,6 +68,16 @@ export default function Home() {
             />
           </div>
         </form>
+        <div className="pt-8 justify-between items-center flex flex-wrap">
+          <span className="text-[1rem]">total</span>
+          <Link
+            className="border border-white w-40 flex justify-between p-4 align-middle items-center  text-[1rem] rounded-[3rem] h-8 Lg:h-12 pl-3 cursor-pointer hover:rounded-[3rem] hover:w-[40%] hover:h-12 hover:shadow-xl duration-150 "
+            href="/ticket"
+          >
+            buy now
+            <ArrowUpRight size={18} />
+          </Link>
+        </div>
       </div>
     </>
   );
