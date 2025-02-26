@@ -35,25 +35,25 @@ export default function RootLayout({ children }) {
               </div>
             </Link>
             <Link href="/">
-              <NavCard Text="About" />
+              <NavCard Text="ABOUT" />
             </Link>
             <Link href="/gallery">
-              <NavCard Text="Gallery" />
+              <NavCard Text="GALLERY" />
             </Link>
             <Link href="/events">
-              <NavCard Text="Events" />
+              <NavCard Text="EVENTS" />
             </Link>
             <Link href="/contact">
-              <NavCard Text="Contact" />
+              <NavCard Text="CONTACT" />
             </Link>
           </div>
           <div className="absolute top-0 right-0 w-full lg:w-4/5 p-2 overflow-y-auto h-[300vh] lg:h-screen grid  gap-2 grid-cols-1 lg:grid-cols-2 grid-rows-10">
             {/* this is phone nav these two divs */}
             <div className="row-span-1 lg:row-span-2 col-span-1 w-full h-full border-t-2 border-[#fff] p-2 text-[2rem]">
-              "rsgbsergbvs"
+              UPCOMING
             </div>
             <div className="row-span-1 lg:row-span-2  col-span-1 w-full h-full border-t-2 border-[#fff] p-2 text-[2rem]">
-              "rsgbsergbvs"
+              PREVIOUS
             </div>
             {children}
           </div>
