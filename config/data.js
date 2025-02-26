@@ -5,6 +5,7 @@ export const currentEvents = [
     slug: "live-jazz-night",
     description:
       "Join us for an intimate evening of jazz music performed by talented local artists. Experience the magic of classic jazz standards in our cozy venue.",
+    image: "tickets.png",
   },
   {
     date: "2024-02-20",
@@ -12,6 +13,7 @@ export const currentEvents = [
     slug: "dance-workshop",
     description:
       "A hands-on workshop led by professional dancers teaching you contemporary dance techniques. Suitable for all skill levels.",
+    image: "tickets.png",
   },
   {
     date: "2024-03-01",
@@ -19,6 +21,7 @@ export const currentEvents = [
     slug: "comedy-show",
     description:
       "Get ready to laugh with Amsterdam's rising comedy stars. An evening filled with fresh humor and original stand-up performances.",
+    image: "tickets.png",
   },
   {
     date: "2024-03-10",
@@ -26,6 +29,7 @@ export const currentEvents = [
     slug: "poetry-slam",
     description:
       "Experience the power of words as local poets compete in our monthly poetry slam. Featuring both established and emerging voices.",
+    image: "tickets.png",
   },
 ];
 
@@ -36,6 +40,7 @@ export const previousEvents = [
     slug: "holiday-special",
     description:
       "A festive celebration featuring seasonal music, delicious holiday treats, and specially crafted winter cocktails.",
+    image: "tickets.png",
   },
   {
     date: "2023-11-30",
@@ -43,6 +48,7 @@ export const previousEvents = [
     slug: "open-mic-night",
     description:
       "Our popular open mic night where performers of all kinds can share their talents with an appreciative audience.",
+    image: "tickets.png",
   },
   {
     date: "2023-11-15",
@@ -50,6 +56,7 @@ export const previousEvents = [
     slug: "art-exhibition",
     description:
       "A curated exhibition showcasing diverse artworks from Amsterdam's local artist community, featuring paintings, sculptures, and installations.",
+    image: "tickets.png",
   },
   {
     date: "2023-11-01",
@@ -57,5 +64,6 @@ export const previousEvents = [
     slug: "music-festival",
     description:
       "An all-day music celebration featuring multiple stages and artists performing rock, jazz, electronic, and world music.",
+    image: "tickets.png",
   },
 ];
