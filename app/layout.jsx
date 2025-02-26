@@ -14,7 +14,8 @@ const splineMono = Spline_Sans_Mono({
 
 export const metadata = {
   title: "ROUGE Amsterdam techno club",
-  description: "ROUGE Amsterdam is a techno club known for its raw energy and underground spirit",
+  description:
+    "ROUGE Amsterdam is a techno club known for its raw energy and underground spirit",
 };
 
 export default function RootLayout({ children }) {
@@ -24,9 +25,9 @@ export default function RootLayout({ children }) {
         className={`${splineMono.variable} antialiased text-[1.25rem] bg-background text-foreground`}
       >
         <TransitionProvider>
-          <div className="hidden fixed top-0 left-0 lg:grid grid-rows-5 w-1/5 h-screen gap-2 max-h-screen py-2">
-            <Link href="/" className="border-t-2 border-[#fff]">
-              <div className="relative col-span-1 row-span-1 h-[70%] w-[70%] xl:w-[60%] xl:h-[60%] xl:mt-4 hover:scale-110 hover:translate-x-4 duration-200">
+          <div className="hidden fixed top-0 left-0 lg:grid grid-rows-5 w-1/5 h-screen gap-2 max-h-screen py-2 pl-2">
+            <Link href="/" className="border-t border-[#fff]">
+              <div className="relative col-span-1 row-span-1 h-[70%] w-[70%] xl:w-[80%] xl:h-[80%] xl:mt-4 hover:scale-110 hover:translate-x-4 duration-200">
                 <Image
                   src="/images/LogoRouge.svg"
                   alt="Rouge Logo"
@@ -49,10 +50,10 @@ export default function RootLayout({ children }) {
           </div>
           <div className="absolute top-0 right-0 w-full lg:w-4/5 p-2 overflow-y-auto h-[300vh] lg:h-screen grid  gap-2 grid-cols-1 lg:grid-cols-2 grid-rows-10">
             {/* this is phone nav these two divs */}
-            <div className="row-span-1 lg:row-span-2 col-span-1 w-full h-full border-t-2 border-[#fff] p-2 text-[2rem]">
+            <div className="row-span-1 lg:row-span-2 col-span-1 w-full h-full border-t border-[#fff]  text-[2rem]">
               UPCOMING
             </div>
-            <div className="row-span-1 lg:row-span-2  col-span-1 w-full h-full border-t-2 border-[#fff] p-2 text-[2rem]">
+            <div className="row-span-1 lg:row-span-2  col-span-1 w-full h-full border-t border-[#fff] text-[2rem]">
               PREVIOUS
             </div>
             {children}

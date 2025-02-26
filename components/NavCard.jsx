@@ -12,7 +12,7 @@ const NavCard = ({ Text }) => {
 
   return (
     <div
-      className="row-span-1 col-span-1 w-full h-full flex-col items-left border-t-2 border-[#fff] p-2 text-[2rem]"
+      className="row-span-1 col-span-1 w-full h-full flex-col items-left border-t border-[#fff]  text-[2rem]"
       onMouseEnter={() => {
         if (ArrowRef.current) {
           gsap.to(ArrowRef.current, {

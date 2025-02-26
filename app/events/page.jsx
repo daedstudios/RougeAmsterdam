@@ -45,29 +45,30 @@ export default function About() {
     <>
       {currentEvents.map((i, index) => (
         <div
-          className="col-span-1 row-span-1 lg:row-span-2 border-t-2 border-[#fff] flex flex-col justify-evenly items-start align-middle"
+          className="col-span-1 row-span-1 lg:row-span-2 border-t border-[#fff] flex flex-col justify-evenly items-start align-middle"
           key={i + 6}
         >
           <div className="text-[0.85rem]"> {i.date}</div>
           <div>{i.text}</div>
-          <div className="border border-white w-40 flex justify-between p-4 align-middle items-center  text-[1rem] rounded-[3rem] h-8 Lg:h-12 pl-3 cursor-pointer hover:rounded-[3rem] hover:w-[40%] hover:h-12 hover:shadow-xl duration-150 ">
-            
+
+          <Link
+            className="border border-white w-40 flex justify-between p-4 align-middle items-center  text-[1rem] rounded-[3rem] h-8 Lg:h-12 pl-3 cursor-pointer hover:rounded-[3rem] hover:w-[40%] hover:h-12 hover:shadow-xl duration-150 "
+            href="/ticket"
+          >
             get tickets
             <ArrowUpRight size={18} />
-          </div>
+          </Link>
         </div>
       ))}
       {previousEvents.map((i, index) => (
         <div
-          className="col-span-1 row-span-1 lg:row-span-2 border-t-2 border-[#fff] flex flex-col justify-evenly items-end align-middle opacity-55 "
+          className="col-span-1 row-span-1 lg:row-span-2 border-t border-[#fff] flex flex-col justify-evenly items-end align-middle opacity-55 "
           key={i}
         >
           <div>{i.text}</div>
           <div className="border border-white w-40 flex justify-end align-middle items-center gap-2 text-[1rem] rounded-[3rem] h-8 Lg:h-12 pr-3 cursor-pointer hover:rounded-sm hover:w-[85%] hover:h-12 hover:shadow-xl duration-150 opacity-55 hover:opacity-100">
-           
             see gallery
-              <ArrowUpRight size={18} />
-             
+            <ArrowUpRight size={18} />
           </div>
         </div>
       ))}
