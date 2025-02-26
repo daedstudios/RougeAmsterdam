@@ -1,34 +1,34 @@
 export const currentEvents = [
   {
     date: "2024-02-15",
-    text: "Live Jazz Night: Featuring local artists performing classic jazz standards",
-    slug: "live-jazz-night",
+    text: "UNDERGROUND TECHNO NIGHT: EXPERIENCE RAW INDUSTRIAL SOUNDS",
+    slug: "underground-techno-night",
     description:
-      "Join us for an intimate evening of jazz music performed by talented local artists. Experience the magic of classic jazz standards in our cozy venue.",
+      "A night dedicated to pure underground techno. Expect deep bass, hypnotic rhythms, and industrial sounds that push the limits of the dancefloor.",
     image: "tickets.png",
   },
   {
     date: "2024-02-20",
-    text: "Dance Workshop: Learn contemporary moves with professional dance",
-    slug: "dance-workshop",
+    text: "TECHNO WORKSHOP: LEARN TO MIX LIKE A PRO",
+    slug: "techno-workshop",
     description:
-      "A hands-on workshop led by professional dancers teaching you contemporary dance techniques. Suitable for all skill levels.",
+      "Hands-on workshop for aspiring DJs. Learn beatmatching, track selection, and mixing techniques from experienced techno artists.",
     image: "tickets.png",
   },
   {
     date: "2024-03-01",
-    text: "Comedy Show: Stand-up performances by Amsterdam's best upcoming comedy talents",
-    slug: "comedy-show",
+    text: "WAREHOUSE RAVE: A NIGHT OF DARK & DEEP TECHNO",
+    slug: "warehouse-rave",
     description:
-      "Get ready to laugh with Amsterdam's rising comedy stars. An evening filled with fresh humor and original stand-up performances.",
+      "Step into an immersive warehouse rave experience. Featuring cutting-edge visuals, pounding bass, and a lineup of underground techno pioneers.",
     image: "tickets.png",
   },
   {
     date: "2024-03-10",
-    text: "Poetry Slam: Join us for an evening of powerful spoken word performances",
-    slug: "poetry-slam",
+    text: "ACID TECHNO TAKEOVER: 303 BASSLINES ALL NIGHT",
+    slug: "acid-techno-takeover",
     description:
-      "Experience the power of words as local poets compete in our monthly poetry slam. Featuring both established and emerging voices.",
+      "A night of mind-bending acid techno featuring rolling 303 basslines, distorted kicks, and raw energy. For true electronic music lovers.",
     image: "tickets.png",
   },
 ];
@@ -36,34 +36,34 @@ export const currentEvents = [
 export const previousEvents = [
   {
     date: "2023-12-15",
-    text: "Holiday Special: Celebrating the season with music, food, and festive drinks",
+    text: "TECHNO WINTER SPECIAL: CELEBRATING THE SEASON WITH DARK BEATS AND INDUSTRIAL SOUNDS",
     slug: "holiday-special",
     description:
-      "A festive celebration featuring seasonal music, delicious holiday treats, and specially crafted winter cocktails.",
+      "A festive night blending deep techno with hypnotic rhythms. Expect immersive visuals, dark basslines, and exclusive winter cocktails.",
     image: "tickets.png",
   },
   {
     date: "2023-11-30",
-    text: "Open Mic Night: Showcase your talents in music, comedy, or poetry",
+    text: "OPEN DECK NIGHT: SHOWCASE YOUR BEST TECHNO SETS",
     slug: "open-mic-night",
     description:
-      "Our popular open mic night where performers of all kinds can share their talents with an appreciative audience.",
+      "A night for upcoming techno DJs to showcase their skills. Bring your USB, step up, and take control of the dancefloor.",
     image: "tickets.png",
   },
   {
     date: "2023-11-15",
-    text: "Art Exhibition: Local artists present their works in various mediums",
+    text: "VISUAL & TECHNO ART EXPERIENCE: AUDIO-VISUAL INSTALLATIONS WITH LIVE DJS",
     slug: "art-exhibition",
     description:
-      "A curated exhibition showcasing diverse artworks from Amsterdam's local artist community, featuring paintings, sculptures, and installations.",
+      "A multi-sensory experience blending techno with immersive visuals. Live DJs, 3D mapping, and underground electronic art installations.",
     image: "tickets.png",
   },
   {
     date: "2023-11-01",
-    text: "Music Festival: A full day of live performances across multiple genres",
+    text: "TECHNO MARATHON: NONSTOP ELECTRONIC MADNESS TILL DAWN",
     slug: "music-festival",
     description:
-      "An all-day music celebration featuring multiple stages and artists performing rock, jazz, electronic, and world music.",
+      "An all-night rave featuring top underground techno artists. Experience relentless beats, raw energy, and a crowd that never stops moving.",
     image: "tickets.png",
   },
 ];

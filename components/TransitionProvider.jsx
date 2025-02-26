@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { gsap } from "gsap";
 import { TransitionRouter } from "next-transition-router";
+import Image from "next/image";
 
 export function TransitionProvider({ children }) {
   const firstLayer = useRef(null);
@@ -89,7 +90,7 @@ export function TransitionProvider({ children }) {
         className="fixed inset-0 z-[999] translate-y-full bg-background text-8xl text-center flex items-center justify-center"
         key={2}
       >
-        !!!#$%!!!
+        <Image src="/images/R.svg" alt="Rouge Logo" width={240} height={120} />
       </div>
     </TransitionRouter>
   );
