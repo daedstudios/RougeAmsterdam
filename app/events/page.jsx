@@ -1,5 +1,6 @@
 import { ArrowDownLeftSquareIcon, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const currentEvents = [
   {
@@ -50,6 +51,7 @@ export default function About() {
           <div className="text-[0.85rem]"> {i.date}</div>
           <div>{i.text}</div>
           <div className="border border-white w-40 flex justify-between p-4 align-middle items-center  text-[1rem] rounded-[3rem] h-8 Lg:h-12 pl-3 cursor-pointer hover:rounded-[3rem] hover:w-[40%] hover:h-12 hover:shadow-xl duration-150 ">
+            
             get tickets
             <ArrowUpRight size={18} />
           </div>
@@ -62,8 +64,10 @@ export default function About() {
         >
           <div>{i.text}</div>
           <div className="border border-white w-40 flex justify-end align-middle items-center gap-2 text-[1rem] rounded-[3rem] h-8 Lg:h-12 pr-3 cursor-pointer hover:rounded-sm hover:w-[85%] hover:h-12 hover:shadow-xl duration-150 opacity-55 hover:opacity-100">
+           
             see gallery
-            <ArrowUpRight size={18} />
+              <ArrowUpRight size={18} />
+             
           </div>
         </div>
       ))}

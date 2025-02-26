@@ -13,8 +13,8 @@ const splineMono = Spline_Sans_Mono({
 });
 
 export const metadata = {
-  title: "Amsterdam techno club",
-  description: "fun and cool place to enjoy techno",
+  title: "ROUGE Amsterdam techno club",
+  description: "ROUGE Amsterdam is a techno club known for its raw energy and underground spirit",
 };
 
 export default function RootLayout({ children }) {
