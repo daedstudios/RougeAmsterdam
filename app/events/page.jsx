@@ -9,7 +9,7 @@ export default function About() {
     <>
       {currentEvents.map((i, index) => (
         <div
-          className="col-span-1 row-span-1 lg:row-span-2 border-t border-[#fff] flex flex-col justify-evenly items-start align-middle"
+          className="col-span-1 text-[1.75rem] row-span-1 lg:row-span-2 border-t border-[#fff] flex flex-col justify-evenly items-start align-middle"
           key={i + 6}
         >
           <div className="text-[0.85rem]"> {i.date}</div>
