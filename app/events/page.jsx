@@ -2,43 +2,7 @@ import { ArrowDownLeftSquareIcon, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const currentEvents = [
-  {
-    date: "2024-02-15",
-    text: "Live Jazz Night: Featuring local artists performing classic jazz standards",
-  },
-  {
-    date: "2024-02-20",
-    text: "Dance Workshop: Learn contemporary moves with professional dance",
-  },
-  {
-    date: "2024-03-01",
-    text: "Comedy Show: Stand-up performances by Amsterdam's best upcoming comedy talents",
-  },
-  {
-    date: "2024-03-10",
-    text: "Poetry Slam: Join us for an evening of powerful spoken word performances",
-  },
-];
-
-const previousEvents = [
-  {
-    date: "2023-12-15",
-    text: "Holiday Special: Celebrating the season with music, food, and festive drinks",
-  },
-  {
-    date: "2023-11-30",
-    text: "Open Mic Night: Showcase your talents in music, comedy, or poetry",
-  },
-  {
-    date: "2023-11-15",
-    text: "Art Exhibition: Local artists present their works in various mediums",
-  },
-  {
-    date: "2023-11-01",
-    text: "Music Festival: A full day of live performances across multiple genres",
-  },
-];
+import { currentEvents, previousEvents } from "@/config/data";
 
 export default function About() {
   return (
@@ -53,7 +17,7 @@ export default function About() {
 
           <Link
             className="border border-white w-40 flex justify-between p-4 align-middle items-center  text-[1rem] rounded-[3rem] h-8 Lg:h-12 pl-3 cursor-pointer hover:rounded-[3rem] hover:w-[40%] hover:h-12 hover:shadow-xl duration-150 "
-            href="/ticket"
+            href={`/events/${i.slug}`}
           >
             get tickets
             <ArrowUpRight size={18} />
