@@ -41,13 +41,13 @@ export default function Gallery() {
           />
         </div>
       </div>
-      <div className="col-span-1 lg:col-span-2 border-t border-[#fff] row-span-1 lg:row-span-2 flex justify-between items-end p-4">
+      <div className="col-span-1 lg:col-span-2  row-span-1 lg:row-span-2 flex justify-between items-end pb-4">
         <StepBack
-          size={40}
+          size={24}
           className="cursor-pointer hover:opacity-55 hover:scale-110"
         />
         <StepForward
-          size={40}
+          size={24}
           className="cursor-pointer hover:opacity-55 hover:scale-110"
         />
       </div>

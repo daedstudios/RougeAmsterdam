@@ -29,7 +29,7 @@ export default function Home() {
           alt="club"
           layout="fill"
           objectFit="cover"
-          className="w-full h-full"
+          className="pt-2 w-full h-full"
         />
       </div>
       <div className="col-span-1 lg:col-span-2 border-t border-[#fff] row-span-2">
