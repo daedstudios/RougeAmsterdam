@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import NavCard from "@/components/NavCard";
 import { TransitionProvider } from "@/components/TransitionProvider";
+import PhoneMenu from "@/components/PhoneMenu";
 // import { Link } from "next-transition-router";
 
 const splineMono = Spline_Sans_Mono({
@@ -49,13 +50,7 @@ export default function RootLayout({ children }) {
             </Link>
           </div>
           <div className="absolute top-0 right-0 w-full lg:w-4/5 p-2 overflow-y-auto h-[250vh] lg:h-screen grid  gap-2 grid-cols-1 lg:grid-cols-2 grid-rows-9 lg:grid-rows-10">
-            {/* this is phone nav these two divs */}
-            <div className="row-span-1 lg:row-span-2 col-span-1 w-full h-full border-t border-[#fff]  text-[2rem]">
-              UPCOMING
-            </div>
-            <div className="hidden lg:block row-span-1 lg:row-span-2  col-span-1 w-full h-full border-t border-[#fff] text-[2rem]">
-              PREVIOUS
-            </div>
+            <PhoneMenu />
             {children}
           </div>
         </TransitionProvider>
