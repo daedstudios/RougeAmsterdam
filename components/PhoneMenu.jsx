@@ -1,5 +1,5 @@
 "use client";
-import { Cross } from "lucide-react";
+import { X, AlignJustify } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -76,11 +76,29 @@ const PhoneMenu = () => {
 
   return (
     <>
+      <div className="row-span-1 lg:row-span-2 col-span-1 w-full h-full border-t border-[#fff] text-[2rem] flex flex-col justify-center items-center lg:hidden">
+        <div
+          className="h-[50%] w-full flex justify-between items-center"
+          onClick={() => setMenuOpen(true)}
+        >
+          <Image
+            src="/images/LogoRouge.svg"
+            alt="Rouge Logo"
+            width={200}
+            height={150}
+            className="translate-y-2 -translate-x-2"
+          />
+          <AlignJustify size={44} />
+        </div>
+        <p className="h-[50%] w-full border-t border-[#fff] flex items-center">
+          {textNav.firstText}
+        </p>
+      </div>
       <div
-        className="row-span-1 lg:row-span-2 col-span-1 w-full h-full border-t border-[#fff] text-[2rem]"
+        className="row-span-1 lg:row-span-2 col-span-1 w-full h-full border-t border-[#fff] text-[2rem] hidden lg:block"
         onClick={() => setMenuOpen(true)}
       >
-        {textNav.firstText}
+        <p>{textNav.firstText}</p>
       </div>
       <div className="hidden lg:block row-span-1 lg:row-span-2  col-span-1 w-full h-full border-t border-[#fff] text-[2rem]">
         {textNav.secondText}
@@ -99,7 +117,7 @@ const PhoneMenu = () => {
             height={150}
             className="translate-y-2 -translate-x-2"
           />
-          <Cross
+          <X
             size={44}
             className="cursor-pointer h-full hover:scale-110 hover:rotate-180 transition-transform duration-100"
             onClick={() => setMenuOpen(false)}
