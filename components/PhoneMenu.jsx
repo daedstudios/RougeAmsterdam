@@ -2,15 +2,22 @@
 import { Cross } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { usePathname } from "next/navigation";
 
 gsap.registerPlugin(useGSAP);
 
 const PhoneMenu = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   const menuRef = React.useRef(null);
+
+  const path = usePathname();
+  const [textNav, setTextNav] = useState({
+    firstText: "main",
+    secondText: "PREVIOUS",
+  });
 
   useEffect(() => {
     if (menuOpen) {
@@ -26,16 +33,57 @@ const PhoneMenu = () => {
     }
   }, [menuOpen]);
 
+  const switchtextNav = (path) => {
+    const newTextObj = {};
+    switch (path) {
+      case "/events":
+        newTextObj.firstText = "COMING UP";
+        newTextObj.secondText = "PREVIOUS";
+        setTextNav(newTextObj);
+        break;
+      case (path.match(/^\/events\/.*/) || {}).input:
+        newTextObj.firstText = "";
+        newTextObj.secondText = "TICKETS";
+        setTextNav(newTextObj);
+        break;
+      case "/gallery":
+        newTextObj.firstText = "";
+        newTextObj.secondText = "GALLERY";
+        setTextNav(newTextObj);
+        break;
+      case "/contact":
+        newTextObj.firstText = "WE ARE WAITING";
+        newTextObj.secondText = "CONTACT";
+        setTextNav(newTextObj);
+        break;
+      case "/":
+        newTextObj.firstText = "ABOUT";
+        newTextObj.secondText = "ROUGE AMSTERDAM";
+        setTextNav(newTextObj);
+        break;
+      default:
+        newTextObj.firstText = "ABOUT";
+        newTextObj.secondText = "ROUGE AMSTERDAM";
+        setTextNav(newTextObj);
+        break;
+    }
+  };
+
+  useEffect(() => {
+    switchtextNav(path);
+    console.log("router", path);
+  }, [path]);
+
   return (
     <>
       <div
         className="row-span-1 lg:row-span-2 col-span-1 w-full h-full border-t border-[#fff] text-[2rem]"
         onClick={() => setMenuOpen(true)}
       >
-        UPCOMING
+        {textNav.firstText}
       </div>
       <div className="hidden lg:block row-span-1 lg:row-span-2  col-span-1 w-full h-full border-t border-[#fff] text-[2rem]">
-        PREVIOUS
+        {textNav.secondText}
       </div>
       <div
         className="fixed top-0 left-0 h-screen w-0 lg:hidden z-50 bg-background flex flex-col 
