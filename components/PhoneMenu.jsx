@@ -108,7 +108,9 @@ const PhoneMenu = () => {
         ref={menuRef}
         onClick={() => setMenuOpen(false)}
       >
+
         <div className="h-28 w-[100%] px-4 flex justify-between items-center">
+
           <Image
             src="/images/LogoRouge.svg"
             alt="Rouge Logo"
