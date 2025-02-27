@@ -5,7 +5,7 @@ import { ArrowDownLeftSquareIcon, ArrowUpRight } from "lucide-react";
 export default function Home() {
   return (
     <>
-      <div className="justify-between flex flex-col h-full col-span-1 border-t border-[#fff] row-span-2 lg:row-span-6">
+      <div className="justify-between flex flex-col h-full col-span-1 border-t pb-4 border-[#fff] row-span-2 lg:row-span-6">
         <div className="">
           where raw energy meets hypnotic beats. A haven for techno lovers,
           ROUGE is more than just a club; it's an immersive experience of deep
@@ -23,7 +23,7 @@ export default function Home() {
           <ArrowUpRight size={24} />
         </Link>
       </div>
-      <div className="relative col-span-1 border-t border-[#fff] row-span-3 lg:row-span-6">
+      <div className="relative col-span-1 border-t border-[#fff]  row-span-3 lg:row-span-6">
         <Image
           src="/images/home.png"
           alt="club"
