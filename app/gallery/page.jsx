@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Gallery() {
   return (
     <>
-      <div className="relative border-t border-[#fff] row-span-2 lg:row-span-6">
+      <div className="relative border-t border-[#fff] row-span-2 lg:row-span-6 z-10">
         <Image
           src="/images/gallery3.png"
           alt="club"
