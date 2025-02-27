@@ -37,7 +37,7 @@ export default function TicketPage({ params }) {
       <div className="h-full text-[2rem] col col-span-1 border-t border-[#fff] lg:row-span-2 row-span-2">
         <div className="text-[1rem] pt-2">{currentEventData.date}</div>
         {currentEventData.text}
-        <div className=" text-[1.5rem] lg:hidden h-full pt-4 border-[#fff] ">
+        <div className="text-[1.5rem] lg:hidden h-full pt-4 border-[#fff]">
           {currentEventData.description}
         </div>
       </div>
@@ -46,7 +46,7 @@ export default function TicketPage({ params }) {
         {currentEventData.description}
       </div>
 
-      <div className="h-full text-[2rem] md:pt-0 pt-16 col col-span-1 lg:row-span-3 row-span-3">
+      <div className="h-full text-[2rem] md:pt-0 pt-28 lg:pt-0 col col-span-1 lg:row-span-3 row-span-3">
         <form className="pt-4 justify-between flex flex-col gap-4 text-white text-lg">
           <input
             type="text"
