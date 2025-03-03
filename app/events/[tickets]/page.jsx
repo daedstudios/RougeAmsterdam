@@ -1,14 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { use, useState, useRef } from "react";
 import { currentEvents } from "@/config/data";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, ChevronsUpDown } from "lucide-react";
+import { ArrowUpRight, ChevronsUpDown, Cross } from "lucide-react";
+import gsap from "gsap";
 
 export default function TicketPage({ params }) {
   const [ticketQuantity, setTicketQuantity] = useState(1);
-  const ticket = params.tickets;
+  const unwrappedParams = use(params);
+  const ticket = unwrappedParams.tickets;
   const data = currentEvents.filter((event) => event.slug === ticket);
   const currentEventData = data[0];
 
@@ -20,8 +22,37 @@ export default function TicketPage({ params }) {
     setTicketQuantity(Number(event.target.value));
   };
 
+  const popupRef = useRef(null);
+
+  const openPopup = () => {
+    gsap.to(popupRef.current, {
+      duration: 0.5,
+      width: "100%",
+      height: "100%",
+    });
+  };
+
+  const closePopup = () => {
+    gsap.to(popupRef.current, {
+      duration: 0.5,
+      width: "0",
+      height: "0",
+    });
+  };
+
   return (
     <>
+      <div
+        className="fixed w-0 h-0 top-0 left-0 z-50 bg-black/80 flex justify-center items-center overflow-hidden"
+        ref={popupRef}
+      >
+        SOORY SOLD OUT
+        <Cross
+          size={50}
+          className="absolute top-0 right-2 cursor-pointer"
+          onClick={closePopup}
+        />
+      </div>
       <div className="h-full col-span-1 border-t border-[#fff] row-span-2 lg:row-span-6">
         <div className="relative w-full h-full">
           <Image
@@ -39,7 +70,6 @@ export default function TicketPage({ params }) {
         {currentEventData.text}
 
         <div className=" text-[1.5rem] lg:hidden h-full pt-4 border-[#fff] ">
-
           {currentEventData.description}
         </div>
       </div>
@@ -48,9 +78,7 @@ export default function TicketPage({ params }) {
         {currentEventData.description}
       </div>
 
-
       <div className="h-full text-[2rem] md:pt-0 pt-28 lg:pt-0 col col-span-1 lg:row-span-3 row-span-3">
-
         <form className="pt-4 justify-between flex flex-col gap-4 text-white text-lg">
           <input
             type="text"
@@ -98,13 +126,13 @@ export default function TicketPage({ params }) {
           <span className="text-[1rem]">
             total: ${currentEventData.price * ticketQuantity} USD
           </span>
-          <Link
+          <div
             className="border border-white w-40 flex justify-between p-4 align-middle items-center text-[1rem] rounded-[3rem] h-8 lg:h-12 pl-3 cursor-pointer hover:rounded-[3rem] hover:w-[40%] hover:h-12 hover:shadow-xl duration-150"
-            href="/ticket"
+            onClick={openPopup}
           >
             Buy Now
             <ArrowUpRight size={18} />
-          </Link>
+          </div>
         </div>
       </div>
     </>
