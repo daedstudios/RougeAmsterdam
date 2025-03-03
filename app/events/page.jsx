@@ -16,7 +16,7 @@ export default function About() {
           <div>{i.text}</div>
 
           <Link
-            className="border border-white w-40 flex justify-between p-4 align-middle items-center  text-[1rem] rounded-[3rem] h-8 Lg:h-12 pl-3 cursor-pointer lg:hover:rounded-[3rem] lg:hover:w-[40%] lg:hover:h-12 lg:hover:shadow-xl duration-150 "
+            className="border border-white w-40 flex justify-between p-4 align-middle items-center  text-[1rem] rounded-[3rem] h-8 Lg:h-12 pl-3 cursor-pointer lg:hover:rounded-[3rem] lg:hover:w-[40%] lg:hover:shadow-xl duration-150 "
             href={`/events/${i.slug}`}
           >
             get tickets
@@ -31,7 +31,7 @@ export default function About() {
         >
           <div>{i.text}</div>
           <Link
-            className="border border-white w-40 flex justify-between p-4 align-middle items-center  text-[1rem] rounded-[3rem] h-8 Lg:h-12 pl-3 cursor-pointer lg:hover:rounded-[3rem] lg:hover:w-[40%] lg:hover:h-12 lg:hover:shadow-xl duration-150"
+            className="border border-white w-40 flex justify-between p-4 align-middle items-center  text-[1rem] rounded-[3rem] h-8 Lg:h-12 pl-3 cursor-pointer lg:hover:rounded-[3rem] lg:hover:w-[40%]  lg:hover:shadow-xl duration-150"
             href="/gallery"
           >
             see gallery
