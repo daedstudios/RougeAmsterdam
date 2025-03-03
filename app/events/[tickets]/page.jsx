@@ -4,7 +4,7 @@ import { use, useState, useRef } from "react";
 import { currentEvents } from "@/config/data";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, ChevronsUpDown, Cross } from "lucide-react";
+import { ArrowUpRight, ChevronsUpDown, X } from "lucide-react";
 import gsap from "gsap";
 
 export default function TicketPage({ params }) {
@@ -26,32 +26,47 @@ export default function TicketPage({ params }) {
 
   const openPopup = () => {
     gsap.to(popupRef.current, {
-      duration: 0.5,
-      width: "100%",
+      duration: 0.1,
       height: "100%",
+      width: "100%",
+    });
+    gsap.to(popupRef.current, {
+      duration: 0.4,
+      delay: 0.2,
+      opacity: 1,
     });
   };
 
   const closePopup = () => {
     gsap.to(popupRef.current, {
-      duration: 0.5,
-      width: "0",
-      height: "0",
+      duration: 0.4,
+      opacity: 0,
+    });
+    gsap.to(popupRef.current, {
+      duration: 0.1,
+      delay: 0.5,
+      height: 0,
+      width: 0,
     });
   };
 
   return (
     <>
       <div
-        className="fixed w-0 h-0 top-0 left-0 z-50 bg-black/80 flex justify-center items-center overflow-hidden"
+        className="fixed w-0 h-0 top-0 left-0 z-50 p-2 justify-center items-center overflow-hidden opacity-0 flex bg-black/5 "
         ref={popupRef}
       >
-        SOORY SOLD OUT
-        <Cross
-          size={50}
-          className="absolute top-0 right-2 cursor-pointer"
-          onClick={closePopup}
-        />
+        <div className="flex relative flex-col p-16  items-center gap-4 text-center text-black bg-white/90 ">
+          <X
+            size={24}
+            className="absolute top-2 right-2 cursor-pointer"
+            onClick={closePopup}
+          />
+          <p className="text-[2rem]">WE ARE SORRY</p>
+          <p className="text-[1rem]">
+            selected tickets are no longer available
+          </p>
+        </div>
       </div>
       <div className="h-full col-span-1 border-t border-[#fff] row-span-2 lg:row-span-6">
         <div className="relative w-full h-full">
@@ -127,7 +142,7 @@ export default function TicketPage({ params }) {
             total: ${currentEventData.price * ticketQuantity} USD
           </span>
           <div
-            className="border border-white w-40 flex justify-between p-4 align-middle items-center text-[1rem] rounded-[3rem] h-8 lg:h-12 pl-3 cursor-pointer hover:rounded-[3rem] hover:w-[40%] hover:h-12 hover:shadow-xl duration-150"
+            className="border border-white w-40 flex justify-between p-4 align-middle items-center text-[1rem] rounded-[3rem] h-8  pl-3 cursor-pointer hover:rounded-[3rem] hover:w-[40%] hover:shadow-xl duration-150"
             onClick={openPopup}
           >
             Buy Now
