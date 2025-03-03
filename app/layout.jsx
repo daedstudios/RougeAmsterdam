@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
               <NavCard Text="CONTACT" />
             </Link>
           </div>
-          <div className="absolute top-0 right-0 w-full lg:w-4/5 p-2 overflow-y-auto h-[250vh] lg:h-screen grid  gap-2 grid-cols-1 lg:grid-cols-2 grid-rows-9 lg:grid-rows-10">
+          <div className="absolute top-0 right-0 w-full lg:w-4/5 p-2 overflow-y-auto h-[260vh] lg:h-screen grid  gap-2 grid-cols-1 lg:grid-cols-2 grid-rows-9 lg:grid-rows-10">
             <PhoneMenu />
             {children}
           </div>
